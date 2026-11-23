@@ -22,7 +22,8 @@ jobs:
         run: |
           mkdir -p data
           curl -fsS \
-            -H "Authorization: Bearer ${API_KEY}" \
+           -H "User-Agent: ZEYA-Guild-Site/1.0" \
+           -H "Authorization: Bearer ${API_KEY}" \
             "https://api.lastasylumtracker.com/v1/alliances/271/ZEYA" \
             -o data/alliance.json
           jq -e . data/alliance.json > /dev/null
