@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d16">
+  <title>ZEYA · Guild Command</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">Z</span><span><b>ZEYA</b><small>GUILD COMMAND</small></span></a>
+      <div class="server-chip"><span class="live-dot"></span> LAST ASYLUM <b>SERVER 271</b></div>
+      <nav>
+        <p class="nav-label">COMMAND</p>
+        <a class="active" href="#overview">▦ <span>대시보드</span></a>
+        <a href="#members">♙ <span>길드원 조회</span></a>
+        <a href="#records">⚔ <span>전투 기록</span><em>준비중</em></a>
+        <p class="nav-label">COMMUNITY</p>
+        <a href="#applications">✧ <span>가입·직책 신청</span><em>준비중</em></a>
+        <a href="#chronicle">◷ <span>길드 연대기</span><em>준비중</em></a>
+        <p class="nav-label">OFFICER ZONE</p>
+        <a href="#management">♜ <span>운영진 관리</span><em>R4+</em></a>
+      </nav>
+      <div class="sidebar-bottom"><div class="shield">◆</div><div><b>ZEYA COMMAND</b><small>Built for the last stand.</small></div></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><div class="eyebrow">ALLIANCE INTELLIGENCE / 271</div><h1>길드 통합 관제실</h1></div>
+        <div class="top-actions"><span class="status"><i></i> 데이터 연결 대기</span><button id="refresh" class="refresh">↻ <span>새로고침</span></button><div class="avatar">Z</div></div>
+      </header>
+
+      <section class="hero" id="overview">
+        <div class="hero-copy"><div class="eyebrow gold">SERVER 271 · ALLIANCE PROFILE</div><h2>ONE ALLIANCE.<br><span>ONE DESTINY.</span></h2><p>ZEYA의 전력과 흐름을 한눈에. 전장은 숫자로 읽고, 승리는 함께 만든다.</p><div class="hero-meta"><span>⌖ SERVER 271</span><span>◈ [ZEYA] 해의 마지막밤</span></div></div>
+        <div class="hero-emblem"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="emblem-core">Z</div><span>ZEYA</span></div>
+      </section>
+
+      <section class="section-head"><div><div class="eyebrow">LIVE INTELLIGENCE</div><h3>길드 현황</h3></div><div id="updated" class="muted">데이터를 불러오는 중…</div></section>
+      <div class="stats">
+        <article class="stat-card"><div class="stat-top"><span>총 전투력</span><b>POWER</b></div><strong id="power">—</strong><small>연맹 전체 전투력</small></article>
+        <article class="stat-card"><div class="stat-top"><span>길드원</span><b>ROSTER</b></div><strong id="members-count">—</strong><small>등록된 길드원</small></article>
+        <article class="stat-card"><div class="stat-top"><span>총 처치</span><b>KILLS</b></div><strong id="kills">—</strong><small>누적 처치 수</small></article>
+        <article class="stat-card"><div class="stat-top"><span>길드 레벨</span><b>LEVEL</b></div><strong id="level">—</strong><small>연맹 레벨</small></article>
+      </div>
+
+      <section class="content-grid" id="members">
+        <article class="panel roster-panel">
+          <div class="panel-head"><div><div class="eyebrow">MEMBER DATABASE</div><h3>길드원 전력 현황</h3></div><span class="pill">AUTO SYNC</span></div>
+          <div class="table-tools"><input id="search" type="search" placeholder="길드원 닉네임 검색…"><select id="sort"><option value="power">전투력순</option><option value="kills">처치순</option><option value="name">이름순</option></select></div>
+          <div class="table-wrap"><table><thead><tr><th>순위</th><th>길드원</th><th>전투력</th><th>처치</th><th>성채</th><th>주간 활동</th></tr></thead><tbody id="roster"><tr><td colspan="6" class="empty">길드 데이터 연결을 기다리고 있습니다.</td></tr></tbody></table></div>
+          <div class="table-foot"><span id="roster-count">0 MEMBERS</span><span>자료 제공: Last Asylum Tracker</span></div>
+        </article>
+        <aside class="panel side-panel">
+          <div class="panel-head"><div><div class="eyebrow">SYSTEM STATUS</div><h3>연동 상태</h3></div><span class="pulse"></span></div>
+          <div class="system-row"><span>게임 데이터 API</span><b id="api-status">확인 중</b></div>
+          <div class="system-row"><span>대상 서버</span><b>271</b></div>
+          <div class="system-row"><span>길드 태그</span><b>[ZEYA]</b></div>
+          <div class="system-row"><span>자동 갱신</span><b>5분 캐시</b></div>
+          <div class="notice"><b>DATA NOTICE</b><p>외부 추적 서비스의 수집 시점과 게임 내 실시간 수치 사이에 차이가 있을 수 있습니다. 최신 데이터 여부는 갱신 시각을 확인하세요.</p></div>
+        </aside>
+      </section>
+
+      <section class="coming" id="records"><div><div class="eyebrow gold">NEXT MODULES</div><h3>전쟁 기록부터 운영진 도구까지</h3><p>길드전·서버전 기록, 가입 신청, 공지·보상, 길드 연대기 기능을 다음 단계에서 연결합니다.</p></div><div class="module-tags"><span>WAR ARCHIVE</span><span>APPLICATIONS</span><span>R4 CONTROL</span><span>GUILD CHRONICLE</span></div></section>
+      <footer>ZEYA GUILD COMMAND <span>SERVER 271 · LAST ASYLUM</span></footer>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body></html>
