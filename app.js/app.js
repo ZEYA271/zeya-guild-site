@@ -63,7 +63,7 @@ async function loadZEYA() {
       roster.appendChild(tr);
     } else {
       members.forEach((member, index) => {
-        const name = getValue(member, ["name", "nickname", "player_name", "username"]) ?? "이름 없음";
+        const name = getValue(member, ["nick_name", "name", "nickname", "player_name", "username"]) ?? "이름 없음";
         const power = getValue(member, ["power", "total_power", "combat_power"]);
         const kills = getValue(member, ["kills", "kill_count", "total_kills"]);
         const level = getValue(member, ["level", "castle_level", "hq_level"]);
